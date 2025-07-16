@@ -4,7 +4,7 @@
     padding: 0;
 }
 body{
-    background-color: rgb(1, 28, 48);
+    background-color: rgb(241, 246, 221);
     min-height: 100vh;
     padding: 4rem 5rem;
     overflow: hidden;
@@ -14,16 +14,19 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
 }
 .panel{
     min-height: 80vh;
-    border-radius: 3rem;
+    width: 0.1rem;
+    border-radius: 1.9rem;
     display: flex;
     align-items: end;
     justify-content: flex-start;
     cursor: pointer;
     background-size: cover;
     flex: 0.5;
+    transition: all 900ms  ease-in-out;
 }
 .panel h3{
     color: white;
@@ -38,7 +41,7 @@ body{
 }
 .active h3{
     opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
+    transition: opacity 0.5s ease-in 0.5s;
 }
 
 @media (max-width: 480px){
