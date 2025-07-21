@@ -15,6 +15,7 @@
 .box{
     background-color: maroon;
     width: 25%;
+    min-width: 15rem;
     margin: 0.5rem;
     height: 190px;
     border-radius: 2rem;
@@ -25,13 +26,13 @@
     display: grid;
     place-items: center;
     font-size: large;
-    transform: translateX(250%);
+    transform: translateX(300%);
     transition: transform 1s ease;
 }
 
 .box:nth-of-type(even){
-    transform: translateX(-250%);
+    transform: translateX(-300%);
 }
-.show{
+.box.show{
     transform: translateX(0);
 }
