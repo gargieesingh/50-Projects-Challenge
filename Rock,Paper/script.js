@@ -18,11 +18,15 @@ moves.forEach((move,index)=> {
             statement.textContent = "YOU WON!";
             var yourScr = parseInt(yourScore.textContent);
             yourScr++;
+            yourScore.textContent = yourScr;
+            yourScore.style.color = "Blue";
         }
         else{
             statement.textContent = "YOU LOSE!";
             var compScr = parseInt(compScore.textContent);
             compScr++;
+            compScore.textContent = compScr;
+            compScore.style.color = "red";
         }
     })
 });
