@@ -9,17 +9,17 @@
     <title>Heart Animation</title>
     <style>
         @keyframes fade {
-            0%   {opacity: 1; transform: translate(-50%, -50%) scale(1); filter: hue-rotate(0);}
-            100% {opacity: 0; transform: translate(-50%, -5000%) scale(0); filter: hue-rotate(720deg);}
+            0%   {opacity: 1; transform: translate(-50%,-50%) scale(1); filter: hue-rotate(0);}
+            100% {opacity: 0; transform: translate(-50%,-5000%) scale(0); filter: hue-rotate(720deg);}
         }
         .animate-fade{
-            animation: fade 20s ease none;
+            animation: fade 10s linear forwards;
         }
     </style>
 </head>
 <body>
-    <div class="box h-screen w-screen bg-black relative">
-        <span class="bg-[url('https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-512.png')] h-20 w-20 bg-cover absolute left-[50%] top-[50%] translate-[-50%] animate-fade"></span>
+    <div class="box h-screen w-screen bg-black relative overflow-hidden">
+        <span class="heart bg-[url('https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-512.png')] h-10 w-10 bg-cover absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] animate-fade pointer-events: none;"></span>
     </div>
 </body>
 </html>

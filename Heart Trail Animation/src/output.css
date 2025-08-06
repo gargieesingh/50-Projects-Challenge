@@ -247,6 +247,9 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
@@ -265,6 +268,9 @@
   .h-250 {
     height: calc(var(--spacing) * 250);
   }
+  .h-full {
+    height: 100%;
+  }
   .h-screen {
     height: 100vh;
   }
@@ -274,6 +280,9 @@
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
   .w-20 {
     width: calc(var(--spacing) * 20);
   }
@@ -282,6 +291,9 @@
   }
   .w-60 {
     width: calc(var(--spacing) * 60);
+  }
+  .w-210 {
+    width: calc(var(--spacing) * 210);
   }
   .w-screen {
     width: 100vw;
@@ -302,6 +314,14 @@
   .translate-\[50\%\] {
     --tw-translate-x: 50%;
     --tw-translate-y: 50%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-x-\[-50\%\] {
+    --tw-translate-x: -50%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-\[-50\%\] {
+    --tw-translate-y: -50%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .transform {
@@ -330,6 +350,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
