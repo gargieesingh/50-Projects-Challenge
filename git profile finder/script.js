@@ -7,6 +7,9 @@ searchBtn.addEventListener('click', (event)=>{
     let username = document.getElementById('username').value;
     let profileDiv = document.getElementById('profile');
     if(username === ""){
-        profileDiv.innerHTML = "<p>Please enter a username !</p>"
+        profileDiv.innerHTML = "<p>Please enter a username !</p>";
     }
+
+    fetch(`https://api.github.com/users/${username}`)
+        
 })
