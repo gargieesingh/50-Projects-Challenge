@@ -1,15 +1,36 @@
+'use strict';
+
 const searchBtn = document.querySelector('button');
 const input = document.querySelector('input');
-console.dir(input);
+const form = document.querySelector('.search-form');
+const profile = document.querySelector('#profile');
 
-searchBtn.addEventListener('click', (event)=>{
-    input.value = "";
-    let username = document.getElementById('username').value;
-    let profileDiv = document.getElementById('profile');
-    if(username === ""){
-        profileDiv.innerHTML = "<p>Please enter a username !</p>";
+form.addEventListener('submit', async(event)=>{
+    event.preventDefault(); //stops the page reload
+    const username = input.value.trim();
+
+    //IF NO USERNAME ENTERED:
+    if(!username){
+        showError('Please enter a username');
+        return;
+    }
+    function showError(message){
+        profile.innerHTML = `<div class="error">${message}</div>`;
     }
 
-    fetch(`https://api.github.com/users/${username}`)
-        
+    //DO THE SEARCH:
+    await fetchAndRenderUser(username);
+
+
+    //PROCESS IN SEARCHING:
+    
+    //LOADING FEATURE:
+    function setLoading(isLoading){
+        if(isLoading){
+            searchBtn.setAttribute('disabled', 'true');
+            profile.innerHTML = `<p class="loading">Loading....</p>`;
+        } else{
+            searchBtn.removeAttribute('disabled');
+        }
+    }
 })
